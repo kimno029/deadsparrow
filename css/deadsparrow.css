@@ -1,0 +1,24 @@
+/**
+*	Custom css
+*	Kim Norder 2015-Feb
+*/
+
+@media only screen and (max-width: 991px){
+	.xs-top-border{
+		border-top: solid 1px #ccc;
+		padding-top: 10px;
+	}
+}
+
+@media only screen and (min-width : 992px){
+	.dsdb-left-border{
+		border-left: solid 1px #ccc;
+		padding-top: 10px;
+
+	}
+}
+
+.dsdb-row-line{
+	padding-top: 2px;
+
+}

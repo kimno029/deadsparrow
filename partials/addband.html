@@ -1,0 +1,46 @@
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse-new-band" aria-expanded="false" aria-controls="collapse-new-band">New Band</button>
+		</div>
+		
+	</div>
+	<div class="collapse" id="collapse-new-band">
+		<div class="row">
+			<div class="col-md-2">
+				Name: 
+			</div>
+			<div class="col-md-2">
+				<input type="text" ng-model="newBand.name" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				Contact: 
+			</div>
+			<div class="col-md-2">
+				<input type="text" ng-model="newBand.contact" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				mail: 
+			</div>
+			<div class="col-md-2">
+				<input type="text" ng-model="newBand.mail" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				City: 
+			</div>
+			<div class="col-md-2">
+				<input type="text" ng-model="newBand.city" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<button class="btn btn-success" ng-click="addBand()" >Add band </button>
+			</div>
+
+		</div>
+	</div><!-- END OF COLLAPSE NEW BAND-->

@@ -1,0 +1,36 @@
+<div class="container">
+	<header class="page-header"><h1>Bands</h1></header>
+	<div id="addBandIncluder" ng-include src="'partials/addband.html'">	</div>
+
+	<div class="row">
+		<div class="col-md-1">
+			<h4 class="primary">Search: </h4>
+		</div>
+		<div class="col-md-3">
+			<input type="text" ng-model="filter.key" />
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-md-2">
+			<h4>
+				<a href="" ng-click="reverse=!reverse; order('name', reverse)" >Name</a>
+			</h4>
+		</div>
+		<div class="col-md-2">
+			<h4>
+				<a href="" ng-click="reverse =! reverse; order('contact', reverse);">Contact</a>
+			</h4>
+		</div>
+	</div>
+	<div class="row xs-top-border dsdb-row-line" ng-repeat="band in bands | filter: filter.key | orderBy: band.name">
+		<div class="col-md-2">
+			{{ band.name }}
+		</div>
+		<div class="col-md-4 dsdb-left-border">
+			{{ band.contact }}
+		</div>
+	</div>
+	<div class="row dsdb-row-line">
+	</div>
+	
+</div>
