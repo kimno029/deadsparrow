@@ -1,31 +1,35 @@
 <?php
 echo "<h1>Crypt</h1>";
 // var_dump(mcrypt_create_iv(22, MCRYPT_DEV_RANDOM));
+
 function getNewSalt(){
 	return uniqid(mt_rand(), true);
 }
 
 // NEW USER
-
-$db_con = pg_connect("host=localhost port=5432 user=dsdb dbname=deadsparrow password=TinTin99");
+/*
+$db_con = pg_connect("host=localhost port=5432 user=postgres dbname=deadsparrow password=bombom");
 if(!$db_con){
 	echo "DB connection failed";
-}
+}else{
+	echo "<h2> Connection true </h2>";
+	pg_prepare($db_con, "new_user", "insert into dsdb_user(user_name, password, salt) VALUES($1, $2, $3)");
+	$user_name = "angus";
+	$salt = getNewSalt();
+	$usr_pass = "katt";
+	$password = crypt($usr_pass, $salt);
 
-// pg_prepare($db_con, "new_user", "insert into dsdb_user(user_name, password, salt) VALUES($1, $2, $3)");
-// $user_name = "angus";
-// $salt = getNewSalt();
-// $usr_pass = "katt";
-// $password = crypt($usr_pass, $salt);
+	$results = pg_execute($db_con, "new_user", array($user_name, $password, $salt));
 
-// $results = pg_execute($db_con, "new_user", array($user_name, $password, $salt));
+	echo "$results <br />";
 
+	if($results){
+		var_dump($results);
+	}else{
+		echo "Failed to execute query";
+	}
+}*/
 
-// if($results){
-// 	var_dump($results);
-// }else{
-// 	echo "Failed to execute query";
-// }
 require 'UserFactory.php';
 $user_name = 'angus';
 $given_pass = 'katt';
