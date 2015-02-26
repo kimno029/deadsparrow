@@ -15,11 +15,19 @@ if($_POST['handle'] && $_POST['password']){
 	}
 }
 ?>
-
+<style>
+	input {
+		width: 100px;
+	}
+	.thin-border{
+		width: 300px;
+		border: solid 1px black;
+	}
+</style>
+<div class="thin-border">
 <form method="POST" href="#">
-	<label>Username</label>
-	<input name="handle" default="user"> </input>
-	<label>Password</label>
-	<input name="password" type="password" />
+	<input name="handle" placeholder="username"> </input>
+	<input name="password" type="password" placeholder="password"/>
 	<button type="submit">Go!</button>
 </form>
+</div>
