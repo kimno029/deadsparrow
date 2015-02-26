@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Crypt</h1>";
+echo "<h1>Crypt github</h1>";
 // var_dump(mcrypt_create_iv(22, MCRYPT_DEV_RANDOM));
 function getNewSalt(){
 	return uniqid(mt_rand(), true);
